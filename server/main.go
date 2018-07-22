@@ -29,15 +29,14 @@ char *getFinderIconStr() {
     //NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     NSString *path = @"/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/FinderIcon.icns";
 
-    NSArray * imageReps = [NSBitmapImageRep imageRepsWithContentsOfFile:path];
-    NSInteger width = 0;
-    NSInteger height = 0;
+    NSArray *imageReps = [NSBitmapImageRep imageRepsWithContentsOfFile:path];
+    //NSInteger width = 0;
+    //NSInteger height = 0;
 
-    NSImageRep * imageRep = [imageReps objectAtIndex: 1];
+    NSImageRep *imageRep = [imageReps objectAtIndex: 1];
     //NSLog(@"width = %ld",[imageRep pixelsWide]);
     //NSLog(@"height = %ld",[imageRep pixelsHigh]);
     
-    [img setSize: NSMakeSize(128,128)];
     NSData *data = [imageRep representationUsingType:NSPNGFileType properties : nil];
     NSString *pngstr = [data base64EncodedStringWithOptions:0 ];
     int len = [pngstr length];

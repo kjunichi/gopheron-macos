@@ -1,4 +1,4 @@
-# gopheron-raspberrypi
+# gopheron-macos
 
 ## usage
 
