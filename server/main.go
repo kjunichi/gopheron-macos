@@ -42,7 +42,7 @@ char *getFinderIconStr() {
     int len = [pngstr length];
     char *buf = (char*)malloc(sizeof(char)*(len+1));
     //NSLog(@"urldata = %@",pngstr);
-    buf = [pngstr UTF8String];
+    strcpy(buf, [pngstr UTF8String]);
     //printf("%s\n",buf);
     //[pool drain];
     return buf;
